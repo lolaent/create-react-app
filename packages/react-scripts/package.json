@@ -1,10 +1,10 @@
 {
   "name": "@g4/react-scripts",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "Configuration and scripts for Create React App.",
   "repository": "lolaent/create-react-app",
-  "publishConfig" : {
-    "registry" : "https://nexus.lolacloud.com/repository/npm-private/"
+  "publishConfig": {
+    "registry": "https://nexus.lolacloud.com/repository/npm-private/"
   },
   "license": "BSD-3-Clause",
   "engines": {
@@ -122,6 +122,7 @@
     "url-loader",
     "webpack",
     "webpack-dev-server",
+    "webpack-manifest-plugin",
     "whatwg-fetch"
   ]
 }
