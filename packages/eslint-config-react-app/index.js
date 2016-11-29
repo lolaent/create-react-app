@@ -231,7 +231,7 @@ module.exports = {
     'keyword-spacing': 'warn',
     'quotes': 'warn',
     'padded-blocks': 'warn',
-    'no-multiple-empty-lines',
+    'no-multiple-empty-lines': 'warn',
     // Allow smoother debugging flow for development
     'no-debugger': 'warn',
   }
