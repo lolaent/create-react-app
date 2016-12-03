@@ -1,11 +1,6 @@
 {
-<<<<<<< HEAD
   "name": "@g4/react-scripts",
-  "version": "0.7.21",
-=======
-  "name": "g4-react-scripts",
   "version": "0.8.0",
->>>>>>> upstream
   "description": "Configuration and scripts for Create React App. Used for g4mobile",
   "repository": "lolaent/create-react-app",
   "publishConfig": {
