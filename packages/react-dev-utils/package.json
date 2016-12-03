@@ -1,7 +1,7 @@
 {
   "name": "react-dev-utils",
   "private": true,
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Webpack utilities used by Create React App",
   "repository": "facebookincubator/create-react-app",
   "license": "BSD-3-Clause",
@@ -15,6 +15,7 @@
     "clearConsole.js",
     "checkRequiredFiles.js",
     "formatWebpackMessages.js",
+    "getProcessForPort.js",
     "InterpolateHtmlPlugin.js",
     "openChrome.applescript",
     "openBrowser.js",
@@ -30,8 +31,5 @@
     "opn": "4.0.2",
     "sockjs-client": "1.0.3",
     "strip-ansi": "3.0.1"
-  },
-  "peerDependencies": {
-    "webpack": "^1.13.2"
   }
 }
