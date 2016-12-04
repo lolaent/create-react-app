@@ -40,6 +40,7 @@ if [ -n "$(git status --porcelain)" ]; then
 fi
 
 
+
 cd $root_path
 # Go!
 ./node_modules/.bin/lerna publish --independent "$@"
