@@ -60,6 +60,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
 - [Troubleshooting](#troubleshooting)
   - [`npm test` hangs on macOS Sierra](#npm-test-hangs-on-macos-sierra)
   - [`npm run build` silently fails](#npm-run-build-silently-fails)
+- [Analyzing Bundle Size](#analyzing-bundle-size)
 - [Something Missing?](#something-missing)
 
 ## Updating to New Releases
@@ -446,7 +447,7 @@ Now you are ready to use the imported React Bootstrap components within your com
 
 Flow is a static type checker that helps you write code with fewer bugs. Check out this [introduction to using static types in JavaScript](https://medium.com/@preethikasireddy/why-use-static-types-in-javascript-part-1-8382da1e0adb) if you are new to this concept.
 
-Recent versions of [Flow](http://flowtype.org/) work with Create React App projects out of the box. 
+Recent versions of [Flow](http://flowtype.org/) work with Create React App projects out of the box.
 
 To add Flow to a Create React App project, follow these steps:
 
@@ -904,7 +905,7 @@ This feature is experimental and still [has major usage issues](https://github.c
 
 ### Editor Integration
 
-If you use [Visual Studio Code](https://code.visualstudio.com), there is a [Jest extension](https://github.com/orta/vscode-jest) which works with Create React App out of the box. This provides a lot of IDE-like features while using a text editor: showing the status of a test run with potential fail messages inline, starting and stopping the watcher automatically, and offering one-click snapshot updates. 
+If you use [Visual Studio Code](https://code.visualstudio.com), there is a [Jest extension](https://github.com/orta/vscode-jest) which works with Create React App out of the box. This provides a lot of IDE-like features while using a text editor: showing the status of a test run with potential fail messages inline, starting and stopping the watcher automatically, and offering one-click snapshot updates.
 
 ![VS Code Jest Preview](https://cloud.githubusercontent.com/assets/49038/20795349/a032308a-b7c8-11e6-9b34-7eeac781003f.png)
 
@@ -1231,6 +1232,11 @@ There are also reports that *uninstalling* Watchman fixes the issue. So if nothi
 ### `npm run build` silently fails
 
 It is reported that `npm run build` can fail on machines with no swap space, which is common in cloud environments. If [the symptoms are matching](https://github.com/facebookincubator/create-react-app/issues/1133#issuecomment-264612171), consider adding some swap space to the machine you’re building on, or build the project locally.
+
+## Analyzing Bundle Size
+
+If you want to see what is in your webpack bundle run a build with `WEBPACK_ANALYZE=true`
+For more details see: [webpack-bundle-analyzer](https://www.npmjs.com/package/webpack-bundle-analyzer)
 
 ## Something Missing?
 

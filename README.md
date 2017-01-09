@@ -110,39 +110,40 @@ Your app is ready to be deployed!
 
 ## User Guide
 
-The [User Guide](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md) includes information on different topics, such as:
+The [User Guide](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md) includes information on different topics, such as:
 
-- [Updating to New Releases](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#updating-to-new-releases)
-- [Folder Structure](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#folder-structure)
-- [Available Scripts](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#available-scripts)
-- [Syntax Highlighting in the Editor](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#syntax-highlighting-in-the-editor)
-- [Displaying Lint Output in the Editor](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#displaying-lint-output-in-the-editor)
-- [Installing a Dependency](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#installing-a-dependency)
-- [Importing a Component](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#importing-a-component)
-- [Adding a Stylesheet](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-a-stylesheet)
-- [Post-Processing CSS](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#post-processing-css)
-- [Adding Images and Fonts](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-images-and-fonts)
-- [Using the `public` Folder](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#using-the-public-folder)
-- [Using Global Variables](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#using-global-variables)
-- [Adding Bootstrap](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-bootstrap)
-- [Adding Flow](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-flow)
-- [Adding Custom Environment Variables](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-custom-environment-variables)
-- [Can I Use Decorators?](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#can-i-use-decorators)
-- [Integrating with a Node Backend](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#integrating-with-a-node-backend)
-- [Proxying API Requests in Development](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#proxying-api-requests-in-development)
-- [Using HTTPS in Development](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#using-https-in-development)
-- [Generating Dynamic `<meta>` Tags on the Server](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#generating-dynamic-meta-tags-on-the-server)
-- [Running Tests](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#running-tests)
-- [Developing Components in Isolation](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#developing-components-in-isolation)
-- [Making a Progressive Web App](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#making-a-progressive-web-app)
-- [Deployment](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#deployment)
-- [Troubleshooting](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#troubleshooting)
+- [Updating to New Releases](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#updating-to-new-releases)
+- [Folder Structure](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#folder-structure)
+- [Available Scripts](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#available-scripts)
+- [Syntax Highlighting in the Editor](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#syntax-highlighting-in-the-editor)
+- [Displaying Lint Output in the Editor](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#displaying-lint-output-in-the-editor)
+- [Installing a Dependency](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#installing-a-dependency)
+- [Importing a Component](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#importing-a-component)
+- [Adding a Stylesheet](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-a-stylesheet)
+- [Post-Processing CSS](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#post-processing-css)
+- [Adding Images and Fonts](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-images-and-fonts)
+- [Using the `public` Folder](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#using-the-public-folder)
+- [Using Global Variables](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#using-global-variables)
+- [Adding Bootstrap](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-bootstrap)
+- [Adding Flow](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-flow)
+- [Adding Custom Environment Variables](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-custom-environment-variables)
+- [Can I Use Decorators?](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#can-i-use-decorators)
+- [Integrating with a Node Backend](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#integrating-with-a-node-backend)
+- [Proxying API Requests in Development](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#proxying-api-requests-in-development)
+- [Using HTTPS in Development](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#using-https-in-development)
+- [Generating Dynamic `<meta>` Tags on the Server](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#generating-dynamic-meta-tags-on-the-server)
+- [Running Tests](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#running-tests)
+- [Developing Components in Isolation](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#developing-components-in-isolation)
+- [Making a Progressive Web App](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#making-a-progressive-web-app)
+- [Deployment](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#deployment)
+- [Troubleshooting](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#troubleshooting)
+- [Analyzing Bundle Size](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#analyzing-bundle-size)
 
 A copy of the user guide will be created as `README.md` in your project folder.
 
 ## How to Update to New Versions?
 
-Please refer to the [User Guide](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#updating-to-new-releases) for this and other information.
+Please refer to the [User Guide](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#updating-to-new-releases) for this and other information.
 
 ## Philosophy
 
