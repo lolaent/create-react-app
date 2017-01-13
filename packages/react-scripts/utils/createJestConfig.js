@@ -36,10 +36,12 @@ module.exports = (resolve, rootDir, isEjecting) => {
       '^(?!.*\\.(js|jsx|css|json)$)': resolve('config/jest/fileTransform.js'),
     },
     transformIgnorePatterns: [
-      '[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$'
+      '[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$',
+      '^.+\\.module\\.css$'
     ],
     moduleNameMapper: {
-      '^react-native$': 'react-native-web'
+      '^react-native$': 'react-native-web',
+      '^.+\\.module\\.css$': resolve('config/jest/cssModuleIdentity.js')
     }
   };
   if (rootDir) {
