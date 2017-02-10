@@ -1,6 +1,6 @@
 {
   "name": "@g4/react-scripts",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "description": "Configuration and scripts for Create React App. Used for g4mobile",
   "repository": "lolaent/create-react-app",
   "publishConfig": {
@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@g4/babel-preset-react-app": "^2.1.0",
-    "@g4/eslint-config-react-app": "^0.0.18",
+    "@g4/eslint-config-react-app": "^0.1.0",
     "autoprefixer": "6.5.1",
     "babel-core": "6.17.0",
     "babel-eslint": "7.1.1",
