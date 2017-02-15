@@ -113,7 +113,7 @@ module.exports = {
   module: {
     rules: [
       // Disable require.ensure as it's not a standard language feature.
-      { parser: { requireEnsure: false } },
+      { parser: { requireEnsure: true } },
       // First, run the linter.
       // It's important to do this before Babel processes the JS.
       {
@@ -286,17 +286,9 @@ module.exports = {
     // if (process.env.NODE_ENV === 'production') { ... }. See `./env.js`.
     // It is absolutely essential that NODE_ENV was set to production here.
     // Otherwise React will be compiled in the very slow development mode.
-<<<<<<< HEAD
-    new webpack.DefinePlugin(env),
+    new webpack.DefinePlugin(env.stringified),
     // Don't include any locale info from moment.js
     new webpack.IgnorePlugin(/(locale)/, /node_modules.+(momentjs)/),
-    // This helps ensure the builds are consistent if source hasn't changed:
-    new webpack.optimize.OccurrenceOrderPlugin(),
-    // Try to dedupe duplicated modules, if any:
-    new webpack.optimize.DedupePlugin(),
-=======
-    new webpack.DefinePlugin(env.stringified),
->>>>>>> upstream/master
     // Minify the code.
     new webpack.optimize.UglifyJsPlugin({
       compress: {
