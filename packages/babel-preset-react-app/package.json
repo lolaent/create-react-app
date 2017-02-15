@@ -1,6 +1,6 @@
 {
   "name": "@g4/babel-preset-react-app",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Babel preset used by lolaent/create-react-app",
   "repository": "lolaent/create-react-app",
   "license": "BSD-3-Clause",
