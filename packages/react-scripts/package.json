@@ -1,6 +1,6 @@
 {
   "name": "@g4/react-scripts",
-  "version": "0.15.4",
+  "version": "0.15.5",
   "description": "Configuration and scripts for Create React App. Used for g4mobile",
   "repository": "lolaent/create-react-app",
   "publishConfig": {
@@ -26,7 +26,7 @@
     "react-scripts": "./bin/react-scripts.js"
   },
   "dependencies": {
-    "@g4/babel-preset-react-app": "^2.2.0",
+    "@g4/babel-preset-react-app": "^2.2.1",
     "@g4/eslint-config-react-app": "^0.1.0",
     "autoprefixer": "6.7.5",
     "babel-core": "6.22.1",
@@ -43,7 +43,6 @@
     "dotenv": "2.0.0",
     "eslint": "3.8.1",
     "eslint-config-standard": "6.2.1",
-    "eslint-loader": "1.6.3",
     "eslint-loader": "1.6.3",
     "eslint-plugin-flowtype": "2.21.0",
     "eslint-plugin-import": "2.0.1",
@@ -70,7 +69,6 @@
     "url-loader": "0.5.7",
     "webpack": "2.2.1",
     "webpack-bundle-analyzer": "^2.3.0",
-    "webpack-dev-server": "2.4.1",
     "webpack-dev-server": "2.4.1",
     "webpack-manifest-plugin": "1.1.0",
     "whatwg-fetch": "2.0.2"
