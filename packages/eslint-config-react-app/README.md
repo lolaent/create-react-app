@@ -1,6 +1,7 @@
 # g4-eslint-config-react-app
 
 This package includes the shareable ESLint configuration used by [G4 Create React App](https://github.com/facebookincubator/create-react-app).  
+
 Please refer to its documentation:
 
 * [Getting Started](https://github.com/facebookincubator/create-react-app/blob/master/README.md#getting-started) – How to create a new app.

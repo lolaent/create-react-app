@@ -5,6 +5,9 @@ Create React apps with no build configuration, according to Lola best practices.
 * [Getting Started](#getting-started) – How to create a new app.
 * [User Guide](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md) – How to develop apps bootstrapped with Create React App.
 
+Create React App works on macOS, Windows, and Linux.<br>
+If something doesn’t work please [file an issue](https://github.com/lolaent/create-react-app/issues/new).
+
 ## tl;dr
 
 ```sh
@@ -117,6 +120,7 @@ The [User Guide](https://github.com/lolaent/create-react-app/blob/master/package
 - [Supported Language Features and Polyfills](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#supported-language-features-and-polyfills)
 - [Syntax Highlighting in the Editor](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#syntax-highlighting-in-the-editor)
 - [Displaying Lint Output in the Editor](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#displaying-lint-output-in-the-editor)
+- [Debugging in the Editor](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#debugging-in-the-editor)
 - [Changing the Page `<title>`](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#changing-the-page-title)
 - [Installing a Dependency](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#installing-a-dependency)
 - [Importing a Component](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#importing-a-component)
@@ -134,6 +138,7 @@ The [User Guide](https://github.com/lolaent/create-react-app/blob/master/package
 - [Proxying API Requests in Development](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#proxying-api-requests-in-development)
 - [Using HTTPS in Development](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#using-https-in-development)
 - [Generating Dynamic `<meta>` Tags on the Server](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#generating-dynamic-meta-tags-on-the-server)
+- [Pre-Rendering into Static HTML Files](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#pre-rendering-into-static-html-files)
 - [Running Tests](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#running-tests)
 - [Developing Components in Isolation](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#developing-components-in-isolation)
 - [Making a Progressive Web App](https://github.com/lolaent/create-react-app/blob/master/packages/react-scripts/template/README.md#making-a-progressive-web-app)
@@ -225,7 +230,7 @@ If you don’t agree with the choices made in this project, you might want to ex
 Some of the more popular and actively maintained ones are:
 
 * [insin/nwb](https://github.com/insin/nwb)
-* [mozilla/neo](https://github.com/mozilla/neo)
+* [mozilla-neutrino/neutrino-dev](https://github.com/mozilla-neutrino/neutrino-dev)
 * [NYTimes/kyt](https://github.com/NYTimes/kyt)
 * [zeit/next.js](https://github.com/zeit/next.js)
 * [gatsbyjs/gatsby](https://github.com/gatsbyjs/gatsby)

@@ -31,9 +31,10 @@ const plugins = [
     // Resolve the Babel runtime relative to the config.
     moduleName: path.dirname(require.resolve('babel-runtime/package'))
   }],
-  require.resolve('babel-plugin-lodash'),
-  // Enables parsing of import()
-  require.resolve('babel-plugin-syntax-dynamic-import')
+  // Adds syntax support for import()
+  require.resolve('babel-plugin-syntax-dynamic-import'),
+  // Picks lodash modules to reduce bundle size
+  require.resolve('babel-plugin-lodash')
 ];
 
 // This is similar to how `env` works in Babel:
@@ -67,13 +68,6 @@ if (env === 'development' || env === 'test') {
 }
 
 if (env === 'test') {
-  plugins.push.apply(plugins, [
-    // We always include this plugin regardless of environment
-    // because of a Babel bug that breaks object rest/spread without it:
-    // https://github.com/babel/babel/issues/4851
-    require.resolve('babel-plugin-transform-es2015-parameters')
-  ]);
-
   module.exports = {
     presets: [
       // ES features necessary for user's Node version
@@ -85,7 +79,10 @@ if (env === 'test') {
       // JSX, Flow
       require.resolve('babel-preset-react')
     ],
-    plugins: plugins
+    plugins: plugins.concat([
+      // Compiles import() to a deferred require()
+      require.resolve('babel-plugin-dynamic-import-node')
+    ])
   };
 } else {
   module.exports = {
@@ -105,13 +102,20 @@ if (env === 'test') {
         // Async functions are converted to generators by babel-preset-latest
         async: false
       }],
+      // Adds syntax support for import()
+      require.resolve('babel-plugin-syntax-dynamic-import'),
     ])
   };
 
   if (env === 'production') {
     // Optimization: hoist JSX that never changes out of render()
-    plugins.push.apply(plugins, [
-      require.resolve('babel-plugin-transform-react-constant-elements')
-    ]);
+    // Disabled because of issues:
+    // * https://github.com/facebookincubator/create-react-app/issues/525
+    // * https://phabricator.babeljs.io/search/query/pCNlnC2xzwzx/
+    // * https://github.com/babel/babel/issues/4516
+    // TODO: Enable again when these issues are resolved.
+    // plugins.push.apply(plugins, [
+    //   require.resolve('babel-plugin-transform-react-constant-elements')
+    // ]);
   }
 }
