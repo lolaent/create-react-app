@@ -1,6 +1,6 @@
 {
   "name": "@g4/react-error-overlay",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "An overlay for displaying stack frames.",
   "main": "lib/index.js",
   "scripts": {

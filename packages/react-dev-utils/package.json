@@ -1,6 +1,6 @@
 {
   "name": "@g4/react-dev-utils",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Webpack utilities used by Create React App",
   "repository": "lolent/create-react-app",
   "publishConfig": {
