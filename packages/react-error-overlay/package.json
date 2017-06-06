@@ -1,5 +1,5 @@
 {
-  "name": "react-error-overlay",
+  "name": "@g4/react-error-overlay",
   "version": "1.0.7",
   "description": "An overlay for displaying stack frames.",
   "main": "lib/index.js",
@@ -10,10 +10,13 @@
     "build": "babel src/ -d lib/",
     "build:prod": "cross-env NODE_ENV=production babel src/ -d lib/"
   },
-  "repository": "facebookincubator/create-react-app",
+  "repository": "lolaent/create-react-app",
+  "publishConfig": {
+    "registry": "https://nexus.lolacloud.com/repository/npm-private/"
+  },
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/facebookincubator/create-react-app/issues"
+    "url": "https://github.com/lolaent/create-react-app/issues"
   },
   "keywords": [
     "overlay",
