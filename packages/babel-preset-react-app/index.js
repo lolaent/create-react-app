@@ -36,6 +36,8 @@ const plugins = [
       regenerator: true,
     },
   ],
+  // Picks lodash modules to reduce bundle size
+  require.resolve('babel-plugin-lodash'),
 ];
 
 // This is similar to how `env` works in Babel:
