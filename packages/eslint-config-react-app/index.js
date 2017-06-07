@@ -292,10 +292,5 @@ module.exports = {
     // TODO: Reenable once https://github.com/gajus/eslint-plugin-flowtype/issues/165 is fixed
     //'flowtype/require-valid-file-annotation': 'warn',
     'flowtype/use-flow-type': 'warn',
-
-    // Compliance Customisations for @g4/eslint-config-react-app
-    // Mostly overrides of standard
-    semi: ['warn', 'always'],
-    indent: ['warn', 4, { SwitchCase: 2 }],
   },
 };
