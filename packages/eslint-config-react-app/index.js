@@ -85,6 +85,9 @@ var restrictedGlobals = [
 ];
 
 module.exports = {
+  // Stylistic rules for @g4 projects
+  extends: 'standard',
+
   root: true,
 
   parser: 'babel-eslint',
@@ -292,5 +295,22 @@ module.exports = {
     // TODO: Reenable once https://github.com/gajus/eslint-plugin-flowtype/issues/165 is fixed
     //'flowtype/require-valid-file-annotation': 'warn',
     'flowtype/use-flow-type': 'warn',
+
+    // Compliance Customisations for @g4/eslint-config-react-app
+    // Mostly overrides of standard
+    semi: ['warn', 'always'],
+    indent: ['warn', 4, { SwitchCase: 2 }],
+
+    // Stylistic errors to warnings
+    'space-before-function-paren': 'warn',
+    'no-trailing-spaces': 'warn',
+    'no-multi-spaces': 'warn',
+    'comma-dangle': 'warn',
+    'keyword-spacing': 'warn',
+    quotes: 'warn',
+    'padded-blocks': 'warn',
+    'no-multiple-empty-lines': 'warn',
+    // Allow smoother debugging flow for development
+    'no-debugger': 'warn',
   },
 };
