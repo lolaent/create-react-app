@@ -1,3 +1,23 @@
+# A lolafork of Create React App
+
+This fork publishes @g4/react-scripts and @g4/babel-preset-react-app to lolas nexus repository. It is currently forked from the upstream 1.0.7 tag.
+
+The fork provides the following features beyound its parent:
+
+* CSS Modules Support
+
+    `*.css` files will be processed normally
+    `*.module.css` will be processed as a module
+
+* Bundle size analysis
+
+    The production webpack config has been adjusted so the a stats.json will be emitted and visualized in your browser if the `WEBPACK_ANALYZE` environment variable is set at build-time
+
+* Exclude storybook files from code coverage
+
+* Reflect CSS classes in snapshot tests
+
+
 # Create React App [![Build Status](https://travis-ci.org/facebookincubator/create-react-app.svg?branch=master)](https://travis-ci.org/facebookincubator/create-react-app)
 
 Create React apps with no build configuration.
