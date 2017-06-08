@@ -136,7 +136,7 @@ module.exports = {
               formatter: eslintFormatter,
               // @remove-on-eject-begin
               baseConfig: {
-                extends: [require.resolve('@g4/eslint-config-react-app')],
+                extends: [require.resolve('eslint-config-react-app')],
               },
               ignore: false,
               useEslintrc: false,
