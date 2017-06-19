@@ -17,6 +17,10 @@ The fork provides the following features beyound its parent:
 
 * Reflect CSS classes in snapshot tests
 
+* Transpile sibling packages in a lerna monorepo
+
+    This is currently done by adding another rule to use babel-loader on any imports from the package's parent directory if it is called `packages` (the lerna default). 
+
 
 # Create React App [![Build Status](https://travis-ci.org/facebookincubator/create-react-app.svg?branch=master)](https://travis-ci.org/facebookincubator/create-react-app)
 

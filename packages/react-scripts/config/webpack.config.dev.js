@@ -199,6 +199,23 @@ module.exports = {
           cacheDirectory: true,
         },
       },
+      // Process sibling modules in the same lerna project with Babel.
+      {
+        test: /\.(js|jsx)$/,
+        include: paths.lernaPackages,
+        exclude: [/node_modules/, paths.appSrc],
+        loader: require.resolve('babel-loader'),
+        options: {
+          // @remove-on-eject-begin
+          babelrc: false,
+          presets: [require.resolve('@g4/babel-preset-react-app')],
+          // @remove-on-eject-end
+          // This is a feature of `babel-loader` for webpack (not Babel itself).
+          // It enables caching results in ./node_modules/.cache/babel-loader/
+          // directory for faster rebuilds.
+          cacheDirectory: true,
+        },
+      },
       // "postcss" loader applies autoprefixer to our CSS.
       // "css" loader resolves paths in CSS and adds assets as dependencies.
       // "style" loader turns CSS into JS modules that inject <style> tags.

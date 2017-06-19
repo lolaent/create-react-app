@@ -194,6 +194,19 @@ module.exports = {
         },
         // @remove-on-eject-end
       },
+      // Process sibling modules in the same lerna project with Babel.
+      {
+        test: /\.(js|jsx)$/,
+        include: paths.lernaPackages,
+        exclude: [/node_modules/, paths.appSrc],
+        loader: require.resolve('babel-loader'),
+        // @remove-on-eject-begin
+        options: {
+          babelrc: false,
+          presets: [require.resolve('@g4/babel-preset-react-app')],
+        },
+        // @remove-on-eject-end
+      },
       // The notation here is somewhat confusing.
       // "postcss" loader applies autoprefixer to our CSS.
       // "css" loader resolves paths in CSS and adds assets as dependencies.
