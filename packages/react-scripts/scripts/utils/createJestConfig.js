@@ -10,8 +10,46 @@
 'use strict';
 
 const fs = require('fs');
+const path = require('path');
 const chalk = require('chalk');
 const paths = require('../../config/paths');
+
+/**
+ * Build a partial regex to allow us to have jest include lerna
+ * packages in traspilation if present
+ */
+function lernaLocalPackages() {
+  const lernaLocalModules = [];
+  try {
+    fs.accessSync(paths.lernaPackages, fs.constants.F_OK);
+    fs
+      .readdirSync(paths.lernaPackages)
+      .filter(file =>
+        fs.lstatSync(path.join(paths.lernaPackages, file)).isDirectory())
+      .forEach(dir => {
+        const pkg = require(path.join(
+          paths.lernaPackages,
+          dir,
+          'package.json'
+        )).name;
+        lernaLocalModules.push(pkg);
+      });
+  } catch (err) {
+    if (err.code === 'ENOENT') {
+      console.log(chalk.green('No lerna packages directory detected'));
+      return '';
+    } else {
+      throw err;
+    }
+  }
+  if (!lernaLocalModules.length) {
+    return '';
+  }
+  console.log(chalk.green('Local lerna packages detected.'));
+  console.log(chalk.green('Jest will transpile these packages:'));
+  console.log(chalk.green(lernaLocalModules.join(', ')));
+  return '(?!' + lernaLocalModules.join('|').replace('/', '[/\\\\]', 'g') + ')';
+}
 
 module.exports = (resolve, rootDir, isEjecting) => {
   // Use this instead of `paths.testsSetup` to avoid putting
@@ -40,7 +78,7 @@ module.exports = (resolve, rootDir, isEjecting) => {
       '^(?!.*\\.(js|jsx|css|json)$)': resolve('config/jest/fileTransform.js'),
     },
     transformIgnorePatterns: [
-      '[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$',
+      '[/\\\\]node_modules[/\\\\]' + lernaLocalPackages() + '.+\\.(js|jsx)$',
       '^.+\\.module\\.css$',
     ],
     moduleNameMapper: {
