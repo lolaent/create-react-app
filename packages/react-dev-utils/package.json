@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "not-react-dev-utils",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "Webpack utilities used by Create React App",
   "repository": "lolent/create-react-app",
   "publishConfig": {
