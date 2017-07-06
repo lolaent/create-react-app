@@ -20,7 +20,8 @@ const InterpolateHtmlPlugin = require('react-dev-utils/InterpolateHtmlPlugin');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 const eslintFormatter = require('react-dev-utils/eslintFormatter');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin;
 const paths = require('./paths');
 const getClientEnvironment = require('./env');
 
@@ -213,6 +214,19 @@ module.exports = {
           compact: true,
         },
       },
+      {
+        test: /\.(js|jsx)$/,
+        include: paths.g4Modules,
+        exclude: [paths.appSrc, paths.lernaPackages],
+        loader: require.resolve('babel-loader'),
+        // @remove-on-eject-begin
+        options: {
+          babelrc: false,
+          presets: [require.resolve('@g4/babel-preset-react-app')],
+          // @remove-on-eject-end
+          compact: true,
+        },
+      },
       // The notation here is somewhat confusing.
       // "postcss" loader applies autoprefixer to our CSS.
       // "css" loader resolves paths in CSS and adds assets as dependencies.
@@ -280,7 +294,8 @@ module.exports = {
                   options: {
                     importLoaders: 1,
                     modules: true,
-                    localIdentname: '[name]__[local]___[hash:base64:5][name]__[local]___[hash:base64:5]',
+                    localIdentname:
+                      '[name]__[local]___[hash:base64:5][name]__[local]___[hash:base64:5]',
                     minimize: true,
                     sourceMap: true,
                   },
