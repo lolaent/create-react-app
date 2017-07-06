@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "eslint-config-react-app",
+  "name": "not-eslint-config-react-app",
   "version": "1.0.6",
   "description": "ESLint configuration used by Create React App",
   "repository": "facebookincubator/create-react-app",
