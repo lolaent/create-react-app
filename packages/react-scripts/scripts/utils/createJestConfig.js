@@ -25,13 +25,11 @@ function lernaLocalPackages() {
     fs
       .readdirSync(paths.lernaPackages)
       .filter(file =>
-        fs.lstatSync(path.join(paths.lernaPackages, file)).isDirectory())
+        fs.lstatSync(path.join(paths.lernaPackages, file)).isDirectory()
+      )
       .forEach(dir => {
-        const pkg = require(path.join(
-          paths.lernaPackages,
-          dir,
-          'package.json'
-        )).name;
+        const pkg = require(path.join(paths.lernaPackages, dir, 'package.json'))
+          .name;
         lernaLocalModules.push(pkg);
       });
   } catch (err) {
@@ -61,7 +59,11 @@ module.exports = (resolve, rootDir, isEjecting) => {
   // TODO: I don't know if it's safe or not to just use / as path separator
   // in Jest configs. We need help from somebody with Windows to determine this.
   const config = {
-    collectCoverageFrom: ['src/**/*.{js,jsx}', '!src/**/*.stories.js'],
+    collectCoverageFrom: [
+      'src/**/*.{js,jsx}',
+      '!src/**/*.stories.js',
+      '!src/**/*.w3c.js',
+    ],
     setupFiles: [resolve('config/polyfills.js')],
     setupTestFrameworkScriptFile: setupTestsFile,
     testMatch: [

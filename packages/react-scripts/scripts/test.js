@@ -38,15 +38,18 @@ if (!process.env.CI && argv.indexOf('--coverage') < 0) {
 const createJestConfig = require('./utils/createJestConfig');
 const path = require('path');
 const paths = require('../config/paths');
-argv.push(
-  '--config',
-  JSON.stringify(
-    createJestConfig(
-      relativePath => path.resolve(__dirname, '..', relativePath),
-      path.resolve(paths.appSrc, '..'),
-      false
-    )
-  )
+const config = createJestConfig(
+  relativePath => path.resolve(__dirname, '..', relativePath),
+  path.resolve(paths.appSrc, '..'),
+  false
 );
+
+// Support passing an override testMatch regex
+if (argv.indexOf('--testMatch') !== -1) {
+  const testMatch = argv[argv.indexOf('--testMatch') + 1];
+  config.testMatch = [testMatch];
+}
+
+argv.push('--config', JSON.stringify(config));
 // @remove-on-eject-end
 jest.run(argv);
