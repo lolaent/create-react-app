@@ -19,8 +19,11 @@ The fork provides the following features beyound its parent:
 
 * Transpile sibling packages in a lerna monorepo
 
-    This is currently done by adding another rule to use babel-loader on any imports from the package's parent directory if it is called `packages` (the lerna default). 
+    This is currently done by adding another rule to use babel-loader on any imports from the package's parent directory if it is called `packages` (the lerna default).
 
+* Support react-relay projects by adding the `babel-plugin-relay` plugin
+
+    The `babel-plugin-relay` plugin will attempt to turn graphql template literals into requires for the `./__generated__/*` files created by the `relay-compiler`, [see this for more info](https://facebook.github.io/relay/docs/babel-plugin-relay.html). It will run in non-relay projects too. This shouldn't cause problems, add an issue if this breaks things.
 
 # Create React App [![Build Status](https://travis-ci.org/facebookincubator/create-react-app.svg?branch=master)](https://travis-ci.org/facebookincubator/create-react-app)
 
