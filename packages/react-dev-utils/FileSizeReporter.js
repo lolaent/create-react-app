@@ -92,7 +92,10 @@ function printFileSizesAfterBuild(
 function removeFileNameHash(buildFolder, fileName) {
   return fileName
     .replace(buildFolder, '')
-    .replace(/\/?(.*)(\.\w+)(\.js|\.css)/, (match, p1, p2, p3) => p1 + p3);
+    .replace(
+      /\/?(.*)(\.[0-9a-f]+)(\.chunk)?(\.js|\.css)/,
+      (match, p1, p2, p3, p4) => p1 + p4
+    );
 }
 
 // Input: 1024, 2048
@@ -119,15 +122,12 @@ function measureFileSizesBeforeBuild(buildFolder) {
       if (!err && fileNames) {
         sizes = fileNames
           .filter(fileName => /\.(js|css)$/.test(fileName))
-          .reduce(
-            (memo, fileName) => {
-              var contents = fs.readFileSync(fileName);
-              var key = removeFileNameHash(buildFolder, fileName);
-              memo[key] = gzipSize(contents);
-              return memo;
-            },
-            {}
-          );
+          .reduce((memo, fileName) => {
+            var contents = fs.readFileSync(fileName);
+            var key = removeFileNameHash(buildFolder, fileName);
+            memo[key] = gzipSize(contents);
+            return memo;
+          }, {});
       }
       resolve({
         root: buildFolder,
