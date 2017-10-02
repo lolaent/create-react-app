@@ -1,6 +1,6 @@
 {
   "name": "@g4/react-scripts",
-  "version": "1.7.1",
+  "version": "1.7.2",
   "description": "Configuration and scripts for Create React App.",
   "repository": "lolaent/create-react-app",
   "publishConfig": {
@@ -24,7 +24,7 @@
     "react-scripts": "./bin/react-scripts.js"
   },
   "dependencies": {
-    "@g4/babel-preset-react-app": "^3.2.0",
+    "@g4/babel-preset-react-app": "^3.2.1",
     "autoprefixer": "7.1.2",
     "babel-core": "6.25.0",
     "babel-eslint": "7.2.3",
