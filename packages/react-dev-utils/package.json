@@ -7,7 +7,7 @@
   "publishConfig": {
     "registry": "https://nexus.lolacloud.com/repository/npm-private/"
   },
-  "license": "BSD-3-Clause",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/lolaent/create-react-app/issues"
   },
@@ -51,7 +51,7 @@
     "inquirer": "3.2.1",
     "is-root": "1.0.0",
     "opn": "5.1.0",
-    "react-error-overlay": "^2.0.1",
+    "react-error-overlay": "^2.0.2",
     "recursive-readdir": "2.2.1",
     "shell-quote": "1.6.1",
     "sockjs-client": "1.1.4",

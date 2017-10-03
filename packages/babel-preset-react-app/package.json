@@ -6,7 +6,7 @@
   "publishConfig": {
     "registry": "https://nexus.lolacloud.com/repository/npm-private/"
   },
-  "license": "BSD-3-Clause",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/lolaent/create-react-app/issues"
   },
