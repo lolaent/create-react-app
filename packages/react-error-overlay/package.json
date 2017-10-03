@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "not-react-error-overlay",
-  "version": "2.1.0",
+  "version": "9.9.9",
   "description": "An overlay for displaying stack frames.",
   "main": "lib/index.js",
   "scripts": {
