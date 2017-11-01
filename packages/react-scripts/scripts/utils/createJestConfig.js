@@ -58,34 +58,46 @@ module.exports = (resolve, rootDir, isEjecting) => {
   // in Jest configs. We need help from somebody with Windows to determine this.
   const config = {
     collectCoverageFrom: [
-      'src/**/*.{js,jsx}',
+      'src/**/*.{js,jsx,mjs}',
       '!src/**/*.stories.js',
       '!src/**/*.w3c.js',
     ],
     setupFiles: [resolve('config/polyfills.js')],
     setupTestFrameworkScriptFile: setupTestsFile,
     testMatch: [
-      '<rootDir>/src/**/__tests__/**/*.js?(x)',
-      '<rootDir>/src/**/?(*.)(spec|test).js?(x)',
+      '<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}',
+      '<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}',
     ],
     testEnvironment: 'node',
     testURL: 'http://localhost',
     transform: {
-      '^.+\\.(js|jsx)$': isEjecting
+      '^.+\\.(js|jsx|mjs)$': isEjecting
         ? '<rootDir>/node_modules/babel-jest'
         : resolve('config/jest/babelTransform.js'),
       '^.+\\.css$': resolve('config/jest/cssTransform.js'),
-      '^(?!.*\\.(js|jsx|css|json)$)': resolve('config/jest/fileTransform.js'),
+      '^(?!.*\\.(js|jsx|mjs|css|json)$)': resolve(
+        'config/jest/fileTransform.js'
+      ),
     },
     transformIgnorePatterns: [
-      '[/\\\\]node_modules[/\\\\]' + lernaLocalPackages() + '.+\\.(js|jsx)$',
+      '[/\\\\]node_modules[/\\\\]' +
+        lernaLocalPackages() +
+        '.+\\.(js|jsx|mjs)$',
       '^.+\\.module\\.css$',
     ],
     moduleNameMapper: {
       '^react-native$': 'react-native-web',
       '^.+\\.module\\.css$': resolve('config/jest/cssModuleIdentity.js'),
     },
-    moduleFileExtensions: ['web.js', 'js', 'json', 'web.jsx', 'jsx', 'node'],
+    moduleFileExtensions: [
+      'web.js',
+      'mjs',
+      'js',
+      'json',
+      'web.jsx',
+      'jsx',
+      'node',
+    ],
   };
   if (rootDir) {
     config.rootDir = rootDir;
