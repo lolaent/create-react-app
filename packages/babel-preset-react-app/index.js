@@ -9,6 +9,10 @@
 const plugins = [
   // Support react-relay envs
   require.resolve('babel-plugin-relay'),
+  // Necessary to include regardless of the environment because
+  // in practice some other transforms (such as object-rest-spread)
+  // don't work without it: https://github.com/babel/babel/issues/7215
+  require.resolve('babel-plugin-transform-es2015-destructuring'),
   // class { handleClick = () => { } }
   require.resolve('babel-plugin-transform-class-properties'),
   // The following two plugins use Object.assign directly, instead of Babel's
