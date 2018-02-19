@@ -1,6 +1,6 @@
 {
   "name": "@g4/react-scripts",
-  "version": "1.8.2",
+  "version": "2.0.0",
   "description": "Configuration and scripts for Create React App.",
   "repository": "lolaent/create-react-app",
   "publishConfig": {
